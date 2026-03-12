@@ -1,0 +1,191 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medical Village Project | Nigeria</title><style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,Helvetica,sans-serif}
+body{line-height:1.6;color:#333;background:#fff}
+
+header{position:sticky;top:0;background:#0a6a4a;color:white;z-index:1000}
+.nav{max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:16px}
+.logo{font-weight:700;font-size:20px}
+nav ul{display:flex;list-style:none;gap:20px}
+nav a{color:white;text-decoration:none;font-size:14px}
+.menu{display:none;font-size:24px;cursor:pointer}
+
+.hero{height:90vh;background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url("https://images.unsplash.com/photo-1586773860418-d37222d8fce3");background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;text-align:center;color:white;padding:20px}
+.hero h1{font-size:46px;margin-bottom:15px}
+.hero p{max-width:700px;margin:auto}
+.btn{display:inline-block;margin-top:25px;background:#0a6a4a;color:white;padding:14px 26px;text-decoration:none;border-radius:6px}
+
+.section{padding:80px 20px}
+.container{max-width:1200px;margin:auto}
+.section h2{text-align:center;margin-bottom:40px}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
+.card{background:white;border-radius:8px;padding:25px;box-shadow:0 8px 20px rgba(0,0,0,.08)}
+.card h3{margin-bottom:10px;color:#0a6a4a}
+
+.light{background:#f5f7f7}
+
+.tele{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.telebox{background:#0a6a4a;color:white;padding:30px;border-radius:10px}
+
+.values{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:30px}
+
+.cta{background:#0a6a4a;color:white;text-align:center;padding:60px 20px}
+
+.contact p{margin-bottom:8px}
+
+footer{background:#111;color:white;text-align:center;padding:30px}
+
+/* appointment modal */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center}
+.modal-content{background:white;padding:30px;border-radius:8px;width:90%;max-width:450px}
+.modal input,.modal textarea{width:100%;padding:10px;margin-top:10px;border:1px solid #ccc;border-radius:4px}
+.modal button{margin-top:15px;background:#0a6a4a;color:white;border:none;padding:12px;width:100%;border-radius:4px}
+
+/* responsive */
+@media(max-width:900px){
+.tele{grid-template-columns:1fr}
+}
+
+@media(max-width:768px){
+nav{display:none;position:absolute;background:#0a6a4a;top:60px;left:0;width:100%}
+nav ul{flex-direction:column;padding:20px}
+.menu{display:block}
+nav.active{display:block}
+.hero h1{font-size:32px}
+}
+</style></head><body><header>
+<div class="nav">
+<div class="logo">Medical Village</div>
+<div class="menu" id="menu">☰</div>
+<nav id="nav">
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#telemedicine">Telemedicine</a></li>
+<li><a href="#values">Values</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</div>
+</header><section class="hero">
+<div>
+<h1>Medical Village Project</h1>
+<p>Transforming Healthcare in Nigeria and West Africa through innovation, education, and community-centered medicine.</p>
+<a class="btn" onclick="openModal()">Book Virtual Consultation</a>
+</div>
+</section><section id="about" class="section">
+<div class="container">
+<h2>About Us</h2>
+<p style="max-width:800px;margin:auto;text-align:center">
+The Medical Village Project is a visionary healthcare and community development initiative designed to provide accessible, high‑quality medical services, education, research, and economic growth in Nigeria and West Africa.
+</p>
+</div>
+</section><section class="section light">
+<div class="container grid">
+<div class="card">
+<h3>Our Vision</h3>
+<p>To build a world‑class sustainable Medical Village delivering affordable healthcare, advancing medical education and transforming community wellbeing across Africa.</p>
+</div><div class="card">
+<h3>Our Mission</h3>
+<ul>
+<li>Accessible healthcare services</li>
+<li>Train future health professionals</li>
+<li>Promote preventive medicine</li>
+<li>Create jobs and innovation</li>
+<li>Operate sustainably</li>
+</ul>
+</div>
+</div>
+</section><section id="services" class="section">
+<div class="container">
+<h2>Planned Services</h2>
+<div class="grid">
+<div class="card"><h3>Hospitals & Specialist Clinics</h3></div>
+<div class="card"><h3>Emergency & Trauma Center</h3></div>
+<div class="card"><h3>Diagnostics & Imaging Labs</h3></div>
+<div class="card"><h3>Medical & Nursing School</h3></div>
+<div class="card"><h3>Research Laboratories</h3></div>
+<div class="card"><h3>Residential Wellness Parks</h3></div>
+</div>
+</div>
+</section><section id="telemedicine" class="section light">
+<div class="container tele"><div>
+<h2>Telemedicine Platform</h2>
+<p>
+Before the physical hospital opens in 24 months, Medical Village will operate digitally through the internet providing virtual care.
+</p><ul>
+<li>Video consultation with doctors</li>
+<li>Pharmacist prescription guidance</li>
+<li>Laboratory coordination</li>
+<li>Home care support</li>
+<li>Ambulance coordination</li>
+<li>Weekly doctor education sessions</li>
+</ul></div><div class="telebox">
+<h3>Benefits</h3>
+<ul>
+<li>Reduce hospital queues</li>
+<li>Lower medical costs</li>
+<li>Prevent diseases early</li>
+<li>Improve access to healthcare</li>
+<li>Faster appointments</li>
+</ul>
+</div></div>
+</section><section id="values" class="section">
+<div class="container">
+<h2>Core Values</h2>
+<div class="values"><div class="card">
+<h3>People Centered Care</h3>
+<p>Patients and communities come first. Excellence in treatment and compassion drive our care.</p>
+</div><div class="card">
+<h3>Medicine</h3>
+<p>Health includes medicine, nutrition, mental wellbeing, nature, and lifestyle.</p>
+</div><div class="card">
+<h3>The Village</h3>
+<p>A single ecosystem integrating clinics, counseling, education, living spaces and wellness environments.</p>
+</div></div>
+</div>
+</section><section class="cta">
+<h2>Join the Medical Village Movement</h2>
+<p>Partner, donate, volunteer, or collaborate with us to transform healthcare.</p>
+<a class="btn" href="#contact">Get Involved</a>
+</section><section id="contact" class="section">
+<div class="container contact">
+<h2>Contact</h2>
+<p>1DE Close, Sparklight Estate</p>
+<p>Lagos Ibadan Expressway</p>
+<p>Email: PeoplesMedicalVillage@gmail.com</p>
+<p>Phone: 08132493404</p>
+<p>WhatsApp: 09058693404</p>
+</div>
+</section><footer>
+<p>© 2026 Medical Village Project | Nigeria</p>
+</footer><div class="modal" id="modal">
+<div class="modal-content">
+<h3>Virtual Consultation Request</h3>
+<input placeholder="Full Name">
+<input placeholder="Phone Number">
+<textarea placeholder="Health concern"></textarea>
+<button onclick="closeModal()">Submit</button>
+</div>
+</div><script>
+const menu=document.getElementById('menu')
+const nav=document.getElementById('nav')
+menu.onclick=()=>nav.classList.toggle('active')
+
+function openModal(){document.getElementById('modal').style.display='flex'}
+function closeModal(){document.getElementById('modal').style.display='none'}
+
+// smooth scroll
+
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+ a.addEventListener('click',e=>{
+  e.preventDefault()
+  document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'})
+ })
+})
+</script></body>
+  </html>
